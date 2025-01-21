@@ -1,0 +1,18 @@
+parameters: {}
+environment: {}
+packages:
+    - name: sample_1
+      shared: false
+      functions:
+        - name: function_1
+          binary: false
+          main: function_1/__main__.py
+          runtime: 'python:default'
+          web: false
+          webSecure: false
+          triggers:
+            - name: 'trigger-function_1'
+              sourceType: scheduler
+              sourceDetails:
+                  cron: "*/5 * * * *"  # Cron expression every five minutes
+
