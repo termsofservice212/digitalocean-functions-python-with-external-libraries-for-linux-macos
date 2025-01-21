@@ -8,7 +8,7 @@ Just in case you have the same requirement as I do
 - Using DO Functions
 - Using either python 3.9 or 3.11 (these are the two versions provided by DO)
 - Require additional python libraries not provided by DO
-- You are running Linux. (I had immense trouble with Win11 ergo switched to Linux: Update: I managed to get it running from a Win11 client)
+- You are running Linux. (I had immense trouble with Win11 ergo switched to Linux: _Update:_ I managed to get it running from a Win11 client. See bottom)
 - You are comfortable with the commandline.
 - You require the task to be run at scheduled timings.
 
@@ -105,4 +105,11 @@ packages:
 Alternatively, `doctl serverless undeploy --all` to undeploy all functions at one go.
 
 13. NOTE! You will have to pay if the functions get run more than what's given under DO's [free tier](https://docs.digitalocean.com/products/functions/details/pricing/). So don't forget to undeploy functions when you are done - Even when you are doing testing!
+
+
+## Template for DigitalOcean Functions using python with external libraries for windows 11
+If you are on windows 11, replace the build.cmd (in the root folder) with build.sh in the functions folder.
+
+You will need to install (_python3_)[https://www.python.org/downloads/windows/] on Windows first before pulling in _virtualenv_ `pip install virtualenv` on the command line.
+
 
